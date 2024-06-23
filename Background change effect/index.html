@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Background Change</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="img-box">
+      <img src="images/original.jpg" class="foreground-img" width="100%">
+      <div class="imgwrap">
+        <img src="images/background.jpg" class="background-img" width="100%">
+      </div>
+    </div>
+  </div>
+  <script>
+    // JavaScript to handle background change effect
+    const imgBox = document.querySelector('.img-box');
+    const foregroundImg = document.querySelector('.foreground-img');
+    const backgroundImg = document.querySelector('.background-img');
+
+    imgBox.addEventListener('mouseover', () => {
+      foregroundImg.style.opacity = '0';
+    });
+
+    imgBox.addEventListener('mouseout', () => {
+      foregroundImg.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
